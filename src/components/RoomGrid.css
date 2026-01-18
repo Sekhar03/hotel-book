@@ -1,0 +1,113 @@
+.room-grid-container {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.stairs-indicator {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 60px;
+  min-width: 120px;
+}
+
+.stairs-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.floors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.floor {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.floor-label {
+  min-width: 80px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.rooms-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.room {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  color: #333;
+}
+
+.room.available {
+  background: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.room.available:hover {
+  background: #c8e6c9;
+  transform: scale(1.05);
+}
+
+.room.booked {
+  background: #ffcdd2;
+  border-color: #f44336;
+  color: #c62828;
+  cursor: not-allowed;
+}
+
+.room.booked:hover {
+  background: #ef9a9a;
+}
+
+@media (max-width: 768px) {
+  .room-grid-container {
+    padding: 15px;
+  }
+  
+  .room {
+    width: 50px;
+    height: 50px;
+    font-size: 0.75rem;
+  }
+  
+  .stairs-indicator {
+    min-width: 80px;
+  }
+  
+  .floor-label {
+    min-width: 60px;
+    font-size: 0.85rem;
+  }
+}
+
